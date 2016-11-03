@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Yajirushi</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+	<!-- Set viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!-- Launch in "fullscreen" mode if from home screen -->
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<!-- Does Apple support the above? -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- controls the appearance of the status bar in full-screen mode -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- iOS icons -->
+	<link href="assets/icons/114.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+
+  <!-- favicon, yo -->
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+
+	<style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+    #arcadia,
+    #arcadia canvas {
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+	</style>
+
+	<!-- Engine -->
+	<script src="node_modules/arcadia/dist/arcadia.js"></script>
+
+	<!-- Polyfills, etc. -->
+	<script src="src/lib/polyfills.js"></script>
+	<script src="src/lib/storage-extensions.js"></script>
+	<script src="src/lib/arcadia-extensions.js"></script>
+
+	<!-- Scenes -->
+	<script src="src/scenes/game.js"></script>
+
+	<!-- Objects -->
+	<script src="src/objects/platform.js"></script>
+	<script src="src/objects/player.js"></script>
+
+  <script>
+    window.onload = function () {
+        var game = new Arcadia.Game({
+          width: 375,
+          height: 667,
+          scene: GameScene,
+          scaleToFit: true,
+        });
+    };
+  </script>
+</head>
+<body>
+
+</body>
+</html>
